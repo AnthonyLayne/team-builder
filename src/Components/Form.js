@@ -8,7 +8,7 @@ const Form = (props) => {
     props.change(name, value);
   };
 
-  handleSubmit = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     props.submit();
   };
@@ -19,7 +19,7 @@ const Form = (props) => {
         Name
         <input
           placeholder="Your Name"
-          value={values.name}
+          value={props.values.name}
           name="name"
           onChange={handleChange}
         />
@@ -28,7 +28,7 @@ const Form = (props) => {
         Email
         <input
           placeholder="Your Email"
-          value={values.email}
+          value={props.values.email}
           name="email"
           onChange={handleChange}
         />
@@ -37,7 +37,7 @@ const Form = (props) => {
         Role
         <input
           placeholder="Your Role"
-          value={values.role}
+          value={props.values.role}
           name="role"
           onChange={handleChange}
         />
@@ -46,3 +46,5 @@ const Form = (props) => {
     </form>
   );
 };
+
+export default Form;
